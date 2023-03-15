@@ -5,12 +5,12 @@ import AiFillInstagram from "react-icons/ai";
 export default function Footer() {
   return (
     <footer>
-      <div className="h-[100px] w-full flex flex-col bg-black pl-[170px] pr-[50px] relative">
-        <hr className="flex mb-8" />
+      <div className="h-[100px] w-full flex flex-col bg-black pl-[40px] lg:pl-[170px] lg:pr-[50px] relative">
+        <hr className="flex mb-8 w-[380px] lg:w-[1000px]" />
         <br></br>
         <div className="flex flex-row justify-between">
           <h3 className="font-bold text-xl text-white">Find me on</h3>
-          <div className="flex flex-row gap-7 mr-36">
+          <div className="flex flex-row gap-7 lg:mr-36 mr-8">
             <a href="https://discord.com/channels/@me" target={"_blank"}>
               {" "}
               <BsDiscord size={28} />

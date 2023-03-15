@@ -24,7 +24,7 @@ export default function Skills() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className="flex flex-row gap-[100px]"
+          className="flex flex-row gap-[10px] lg:gap-[100px]"
         >
           <SKillsCard image="/images/html.jpg" name="1. Html" />
           <SKillsCard image="/images/CSS.png" name="2. CSS" />
@@ -35,7 +35,7 @@ export default function Skills() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className="flex flex-row gap-[100px]"
+          className="flex flex-row gap-[10px] lg:gap-[100px]"
         >
           <SKillsCard image="/images/react.jpg" name="4. React" />
           <SKillsCard image="/images/python-logo.png" name="5. Python" />

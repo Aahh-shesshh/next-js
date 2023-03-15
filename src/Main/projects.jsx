@@ -1,6 +1,6 @@
 import React from "react";
 // import { motion } from "framer-motion";
-import { fadeIn } from "@/variant";
+
 import { projects } from "@/Data/projects";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
@@ -11,7 +11,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function Projects() {
   return (
     <div id="project" className="w-full h-[100vh] bg-black projects relative">
-      <div className="absolute ml-[180px] top-[-48px] skills">
+      <div className="absolute ml-[180px] hidden sm:block top-[-48px] skills">
         <h4 className="text-8xl inline-block font-bold ">P</h4>
         <h4 className="text-8xl inline-block font-bold ">R</h4>
         <h4 className="text-8xl inline-block font-bold ">O</h4>
@@ -22,7 +22,7 @@ export default function Projects() {
         <h4 className="text-8xl inline-block font-bold ">S</h4>
       </div>
 
-      <div className="pt-[150px] ml-[170px] mr-[40px]">
+      <div className="pt-[150px] ml-[10px] lg:ml-[170px] mr-[40px]">
         <div className="flex flex-row mb-[30px] items-center justify-between">
           <div>
             <h5 className="text-white font-bold font-sans mb-2 text-xl">
@@ -33,13 +33,16 @@ export default function Projects() {
             </div>{" "}
           </div>
           <div className="">
-            <a className="text-orange-500 flex flex-row items-center justify-center gap-1" href="https://github.com/Aahh-shesshh?tab=repositories" target={"_blank"}>
+            <a
+              className="text-orange-500 flex flex-row items-center justify-center gap-1"
+              href="https://github.com/Aahh-shesshh?tab=repositories"
+              target={"_blank"}
+            >
               See all <FaArrowRight />{" "}
             </a>
           </div>
         </div>
         <Swiper
-          slidesPerView={3}
           spaceBetween={40}
           autoplay={{
             delay: 2000,
@@ -51,14 +54,22 @@ export default function Projects() {
           }}
           navigation={true}
           modules={[Navigation, Pagination, Autoplay]}
+          slidesPerView={1}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {projects.map((project, key) => {
             return (
-              <SwiperSlide>
-                <div
-                  key={key}
-                  className="flex-1 flex flex-col  gap-y-12 mb-10 lg:mb-0"
-                >
+              <SwiperSlide key={key}>
+                <div className="flex-1 flex flex-col  gap-y-12 mb-10 lg:mb-0">
                   {/* image */}
                   <div className="group relative overflow-hidden h-[300px] border-2 border-white/50 rounded-xl">
                     {/* overlay */}

@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="h-[100vh] w-full bg-black pl-[170px] pr-[50px] relative"
+      className="lg:h-[100vh] h-[150vh] w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative"
     >
       {/* contact me upper */}
       <div className="flex flex-col gap-6 justify-center items-center">

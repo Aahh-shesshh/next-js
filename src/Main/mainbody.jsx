@@ -28,16 +28,16 @@ const Mainbody = () => {
   return (
     <div
       id="home"
-      className="h-[100vh] w-full items-center pl-[160px] gap-[50px] overflow-hidden flex flex-row bg-black relative"
+      className=" h-[200vh] pt-[100px] md:pt-0 lg:pt-6 lg:h-[100vh] sm:h-[200vh]  md:h-[200vh] lg:w-full lg:items-center lg:pl-[160px] gap-[50px] overflow-hidden flex flex-col lg:flex-row bg-black relative md:flex-col sm:flex-col"
     >
       <motion.div
-        variants={fadeIn("up", 0.7)}
+        variants={fadeIn("up", 0.4)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
-        className="flex flex-col w-[600px] "
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-col w-[600px] lg:mt-0 sm:mt-[100px]"
       >
-        <h1 className="text-white text-6xl">
+        <h1 className="text-white text-3xl ml-[100px] mt-[50px] lg:mt-0 lg:ml-0 lg:text-6xl">
           Hi! I am Ashish Khatri.
           <br />
           <TypeAnimation
@@ -47,7 +47,7 @@ const Mainbody = () => {
             repeat={Infinity}
           />
         </h1>
-        <p className="text-white text-sm w-[400px]">
+        <p className="text-white text-sm w-[200px] lg:w-[400px] ml-[100px] mt-[50px] lg:mt-0 lg:ml-0 lg:text-xl">
           {" "}
           As a skilled Frontend Developer, I have a strong background in HTML,
           CSS, JavaScript, and React. My expertise allows me to create visually
@@ -60,12 +60,12 @@ const Mainbody = () => {
         variants={fadeIn("up", 0.2)}
         initial="hidden"
         whileInView={"show"}
-        viewport={{ once: false, amount: 0.7 }}
+        viewport={{ once: false, amount: 0.5 }}
         className="w-[350px]  h-[400px]"
       >
-        <div ><img className="w-full rounded-xl  h-[400px]" src="mainimg.jpg" /></div>
+        <div ><img className="w-full rounded-xl  h-[400px] ml-[50px] lg:ml-0" src="mainimg.jpg" /></div>
       </motion.div>
-
+ 
       
       
         <div className="absolute w-full h-[100vh] inset-0">

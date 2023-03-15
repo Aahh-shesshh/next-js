@@ -10,7 +10,7 @@ export default function About() {
     <div
       ref={ref}
       id="about"
-      className="h-[100vh] w-full bg-black pl-[170px] pr-[50px] relative"
+      className="h-[200vh] lg:h-[100vh] w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative"
     >
       <div className="flex flex-col gap-6 justify-center items-center">
         <h1 className="text-white  font-extrabold text-5xl"> ABOUT ME</h1>
@@ -19,7 +19,7 @@ export default function About() {
         </div>{" "}
       </div>
       <br />
-      <div className="border-2 w-full flex flex-row justify-center h-[450px] rounded-md">
+      <div className="border-2 w-full flex flex-col lg:flex-row items-center justify-center ml-[20px] lg:ml-0 lg:h-[450px] h-[750px]  rounded-md">
         <div className="w-[500px] h-[445px] flex flex-col gap-[10px] justify-center items-center">
           <h1 className="font-extrabold text-4xl">Academics</h1>
           <div className="line"></div>
