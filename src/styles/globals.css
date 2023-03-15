@@ -175,10 +175,10 @@ input[type="email"]:focus{
 }
 
 
-a{
+footer a{
   color: white;
 }
-a:hover{
+footer a:hover{
   color:limegreen;
   
   animation: swing 1s ease-in-out;
