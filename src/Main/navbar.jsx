@@ -149,6 +149,7 @@ export default function Navbar() {
           <img className="w-[70px] rounded-full h-[70px]" src="/images/logo.jpg"/>
         </div>
       </div>
+      
     </>
   );
 }

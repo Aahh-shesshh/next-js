@@ -68,3 +68,5 @@ export default function Contact() {
     </div>
   );
 }
+
+// Home.Layout = Contact.BaseLayout;

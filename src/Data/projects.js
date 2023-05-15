@@ -14,11 +14,7 @@ export const projects = [
         title : "Demo project" ,
         img: "/images/project1.jpg"
     },
-    {
-        pretitle : "AUTORICKSHAW SYSTEM",
-        title : "JAVA GUI" ,
-        img: "/images/project4.jpg",
-    },
+   
     {
         pretitle : "PYTHON",
         title : "COSTUME RENTAL SYSTEM" ,

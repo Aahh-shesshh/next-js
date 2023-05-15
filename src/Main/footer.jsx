@@ -1,13 +1,12 @@
 import React from "react";
 import { BsDiscord, BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
-import AiFillInstagram from "react-icons/ai";
 
 export default function Footer() {
   return (
     <footer>
       <div className="h-[100px] w-full flex flex-col bg-black pl-[40px] lg:pl-[170px] lg:pr-[50px] relative">
-        <hr className="flex mb-8 w-[380px] lg:w-[1000px]" />
-        <br></br>
+        <hr className="flex mb-4 w-[380px] lg:w-[1000px]" />
+        <br />
         <div className="flex flex-row justify-between">
           <h3 className="font-bold text-xl text-white">Find me on</h3>
           <div className="flex flex-row gap-7 lg:mr-36 mr-8">
