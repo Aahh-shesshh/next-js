@@ -7,28 +7,22 @@ import Loading from "@/Main/loading";
 import Footer from "@/Main/footer";
 
 export default function BaseLayout({ children }) {
-  const [showLoading, setShowLoading] = useState(true);
+  // const [showLoading, setShowLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoading(false);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowLoading(false);
+  //   }, 2000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <Provider store={store}>
-      {showLoading ? (
-        <Loading />
-      ) : (
-        <div>
-          <Navbar />
-          
-        </div>
-      )}
-
-      <div>{children}</div>
-      <Footer />
+      <div>
+        {/* <Navbar /> */}
+        <div className="bg-black">{children}</div>
+        <Footer />
+      </div>
     </Provider>
   );
 }

@@ -11,17 +11,6 @@ import { FaArrowRight } from "react-icons/fa";
 export default function Projects() {
   return (
     <div id="project" className="w-full h-[100vh] bg-black projects relative">
-      <div className="absolute ml-[180px] hidden sm:block top-[-48px] skills">
-        <h4 className="text-8xl inline-block font-bold ">P</h4>
-        <h4 className="text-8xl inline-block font-bold ">R</h4>
-        <h4 className="text-8xl inline-block font-bold ">O</h4>
-        <h4 className="text-8xl inline-block font-bold ">J</h4>
-        <h4 className="text-8xl inline-block font-bold ">E</h4>
-        <h4 className="text-8xl inline-block font-bold ">C</h4>
-        <h4 className="text-8xl inline-block font-bold ">T</h4>
-        <h4 className="text-8xl inline-block font-bold ">S</h4>
-      </div>
-
       <div className="pt-[150px] ml-[10px] lg:ml-[170px] mr-[40px]">
         <div className="flex flex-row mb-[30px] items-center justify-between">
           <div>

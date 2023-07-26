@@ -4,17 +4,15 @@ import { HiHome } from "react-icons/hi";
 import { AiFillProject } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { GrMail } from "react-icons/gr";
-import {GiSkills} from "react-icons/gi";
+import { GiSkills } from "react-icons/gi";
 
 export default function Navbar() {
   const [toogleMenu, setToogleMenu] = useState(false);
 
-  console.log(toogleMenu);
-
   return (
     <>
       <div
-        className="w-full h-[100px] fixed backdrop-sepia-0 z-[999] flex flex-row justify-between px-[30px]"
+        className="w-full  h-[100px] fixed backdrop-sepia-0 z-[999] flex flex-row justify-between px-[30px]"
         style={{ backdropFilter: "blur(55px)" }}
       >
         {/* Side navv .............  */}
@@ -105,7 +103,7 @@ export default function Navbar() {
             </p>
           </Link>
         </div>
-          {/* tooogle menu  */}
+        {/* tooogle menu  */}
         <div
           onClick={() => setToogleMenu((prev) => !prev)}
           className=" w-[100px] z-9999 flex flex-col cursor-pointer items-center gap-[5px] justify-center"
@@ -146,10 +144,12 @@ export default function Navbar() {
           ></div>
         </div>
         <div className="w-[100px]  flex flex-row items-center justify-center">
-          <img className="w-[70px] rounded-full h-[70px]" src="/images/logo.jpg"/>
+          <img
+            className="w-[70px] rounded-full h-[70px]"
+            src="/images/logo.jpg"
+          />
         </div>
       </div>
-      
     </>
   );
 }

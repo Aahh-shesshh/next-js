@@ -1,13 +1,31 @@
-import React from 'react'
+import React from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { fadeIn } from "@/variant";
 
-export default function SKillsCard(props) {
+export default function SkillsCard({ children, baseVelocity = 100, url }) {
   return (
-    <div className='card p-4'>
-        
-          <img className='w-[80px] h-[70px] mb-4' src={props.image} />
-          <h3 className='text-white text-lg'>{props.name}</h3>
-
-        
+    <div>
+      <motion.div
+        variants={fadeIn("right", 0.4)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-row "
+      >
+        <div className="tooltip ">
+          <Image
+            src={"/images/react.png"}
+            className="hover:scale-110 ease-in-out transition-all"
+            width={80}
+            height={80}
+          />
+          Hello
+          <span className="tooltiptext bg-orange-400 text-stone-500">
+            ReactJS
+          </span>
+        </div>
+      </motion.div>
     </div>
-  )
+  );
 }
