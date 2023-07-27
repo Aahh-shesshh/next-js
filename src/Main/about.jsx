@@ -47,14 +47,14 @@ export default function About() {
           <div className="line"></div>
           <h3 className="font-bold text-xl text-white"></h3>
           <p className="text-xl text-white w-[350px]">
-            I am currently in 2nd semester of 2nd year at ICP and am confident in my
+            I am currently in 3rd year at ICP and am confident in my
             ability to turn complex designs into clean and efficient code.
           </p>
           <br />
           <div className="flex flex-row w-[350px] items-center justify-center gap-[30px]">
             <div>
               <div className="text-[40px] text-white font-tertiary text-gradient mb-2">
-                {inView ? <CountUp start={0} end={5} duration={3} /> : null}
+                {inView ? <CountUp start={0} end={6} duration={3} /> : null}
               </div>
               <div className="text-sm text-white tracking-[2px]">
                 Months of <br />

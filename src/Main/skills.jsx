@@ -1,11 +1,12 @@
 import SkillCard from "@/components/Cards/skillsCard";
-import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/variant";
 
 export default function Skills() {
   return (
     <div id="skills" className="w-full relative">
-      <div className="flex px-[50px] gap-4  flex-col skills items-center justify-center ">
+      <div className="flex px-[50px] gap-4  flex-col skills items-center justify-center">
         <h2 className="text-stone-400 text-5xl">My Skills</h2>
 
         <div className="w-[250px] h-1 bg-white flex items-center">
@@ -19,8 +20,46 @@ export default function Skills() {
             <span className="text-orange-400"> NODE JS and EXPRESS JS</span>.
           </p>
         </div>
-        <SkillCard />
-        <div className="flex flex-col gap-5"></div>
+        <hr className="w-full px-10  border-gray-500" />
+        <div className="flex flex-col gap-5">
+          <h3 className="text-2xl text-stone-400">Frontend skills</h3>
+          <motion.div
+            variants={fadeIn("right", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex flex-row items-center justify-center gap-20"
+          >
+            <SkillCard url={"/images/react.png"} title={"ReactJS"} />
+            <SkillCard url={"/images/tailwind.png"} title={"Tailwind CSS"} />
+            <SkillCard url={"/images/next.png"} title={"NextJS"} />
+            <SkillCard url={"/images/typescript.png"} title={"Typescript"} />
+          </motion.div>
+          <hr className="w-full px-10  border-gray-500" />
+          <h3 className="text-2xl text-stone-400">Backend skills</h3>
+          <motion.div
+            variants={fadeIn("left", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex flex-row items-center gap-20 justify-center"
+          >
+            <SkillCard url={"/images/expressjs.png"} title={"ExpressJS"} />
+            <SkillCard url={"/images/node.png"} title={"NodeJS"} />
+            <SkillCard url={"/images/mongo.png"} title={"Mongo DB"} />
+          </motion.div>
+          <hr className="w-full px-10  border-gray-500" />
+          <h3 className="text-2xl text-stone-400">Version control</h3>
+          <motion.div
+            variants={fadeIn("left", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
+            className="flex flex-row items-center gap-20 justify-center"
+          >
+            <SkillCard url={"/images/github.png"} title={"GitHub"} />
+          </motion.div>
+        </div>
       </div>
     </div>
   );
