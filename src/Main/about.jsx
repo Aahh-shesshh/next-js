@@ -11,7 +11,7 @@ export default function About() {
     <div
       ref={ref}
       id="about"
-      className="h-[15  0vh] lg:h-[100vh] w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative"
+      className=" w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative pb-28"
     >
       <div className="flex flex-col gap-6 justify-center items-center">
         <h1 className="text-white  font-extrabold text-5xl"> ABOUT ME</h1>

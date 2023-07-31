@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="lg:h-[100vh] h-[150vh] w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative"
+      className="w-full bg-black lg:pl-[170px] sm:pl-[10px] pr-[50px] relative"
     >
       {/* contact me upper */}
       <div className="flex flex-col gap-6 justify-center items-center">
@@ -28,7 +28,7 @@ export default function Contact() {
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1"
           >
-            <div>
+            <div className="flex items-center flex-col">
               <h4 className="text-xl uppercase text-white font-medium mb-2 tracking-wide">
                 Get in touch{" "}
               </h4>
@@ -64,6 +64,8 @@ export default function Contact() {
             <button className="send-btn">Send Message</button>
           </motion.form>
         </div>
+        <br />
+        <hr className="w-full px-10  border-gray-500" />
       </div>
     </div>
   );

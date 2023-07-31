@@ -10,7 +10,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Projects() {
   return (
-    <div id="project" className="w-full h-[100vh] bg-black projects relative">
+    <div id="project" className="w-full projects relative pb-11">
       <div className="pt-[150px] ml-[10px] lg:ml-[170px] mr-[40px]">
         <div className="flex flex-row mb-[30px] items-center justify-between">
           <div>
@@ -91,6 +91,9 @@ export default function Projects() {
             );
           })}
         </Swiper>
+        <br />
+        <br />
+        <hr className="w-full px-10  border-gray-500" />
       </div>
     </div>
   );

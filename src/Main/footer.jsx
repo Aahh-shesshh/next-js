@@ -4,12 +4,14 @@ import { BsDiscord, BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 export default function Footer() {
   return (
     <footer>
-      <div className="h-[100px] w-full flex flex-col bg-black pl-[40px] lg:pl-[170px] lg:pr-[50px] relative">
-        <hr className="flex mb-4 w-[380px] lg:w-[1000px]" />
+      <div className="w-full flex flex-col bg-black pl-[40px] lg:pl-[170px] lg:pr-[50px] relative py-7">
         <br />
         <div className="flex flex-row justify-between">
-          <h3 className="font-bold text-xl text-white">Find me on</h3>
+          <p className="font-bold text-xl text-stone-400">
+            All rights reserverd by Ashish Khatri
+          </p>
           <div className="flex flex-row gap-7 lg:mr-36 mr-8">
+            <h3 className="font-bold text-xl text-white">Find me on</h3>
             <a href="https://discord.com/channels/@me" target={"_blank"}>
               {" "}
               <BsDiscord size={28} />
