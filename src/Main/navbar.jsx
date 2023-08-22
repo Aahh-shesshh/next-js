@@ -135,7 +135,7 @@ export default function Navbar() {
             style={
               toogleMenu
                 ? {
-                    transform: "translateX(-100px)",
+                    transform: "translateX(-200px)",
                     transition: "all ease-in-out 0.5s",
                   }
                 : {}

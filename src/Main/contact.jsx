@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { sendContactForm } from "@/lib/api";
+const initialValues = { name: "", email: "", message: "" };
+
+const initialState = { values: initialValues };
 
 export default function Contact() {
+  const [data, setData] = useState(initialState);
+  const { values } = data;
+  const [isLoading, setIsLoading] = useState(false);
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+    setData((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [name]: value,
+      },
+    }));
+  };
+
+  const onSubmit = async () => {
+    setIsLoading(true);
+    try {
+      await sendContactForm(values);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+    setIsLoading(false);
+  };
+
   return (
     <div
       id="contact"
@@ -49,19 +78,43 @@ export default function Contact() {
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white  transition-all"
               type="email"
               placeholder="Your email"
+              value={data.values.email}
+              onChange={handleChange}
+              required={true}
+              name="email"
             />
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white  transition-all"
               type="text"
               placeholder="Your name"
+              value={data.values.name}
+              onChange={handleChange}
+              required={true}
+              name="name"
             />
             <input
               className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white  
                transition-all mb-8 resize-none"
               type="text"
               placeholder="Your message"
+              value={data.values.message}
+              onChange={handleChange}
+              required={true}
+              name="message"
             />
-            <button className="send-btn">Send Message</button>
+            <button
+              className="send-btn relative"
+              type="button"
+              onClick={onSubmit}
+            >
+              Send Message{" "}
+              {isLoading && (
+                <AiOutlineLoading3Quarters
+                  size={20}
+                  className="absolute right-4 top-5 animate-spin"
+                />
+              )}
+            </button>
           </motion.form>
         </div>
         <br />
