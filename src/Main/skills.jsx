@@ -30,7 +30,7 @@ export default function Skills() {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-row items-center justify-center gap-20"
           >
-            <SkillCard url={"/images/react.png"} title={"ReactJS"} />
+            <SkillCard url={"/images/React.png"} title={"ReactJS"} />
             <SkillCard url={"/images/tailwind.png"} title={"Tailwind CSS"} />
             <SkillCard url={"/images/next.png"} title={"NextJS"} />
             <SkillCard url={"/images/typescript.png"} title={"Typescript"} />
