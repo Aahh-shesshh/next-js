@@ -17,7 +17,7 @@ export default function Navbar() {
       >
         {/* Side navv .............  */}
         <div
-          className="flex flex-col pl-2 bg-transparent fixed w-[180px] top-[120px] h-[300px]  ease-in-out gap-[30px] left-[-400px] duration-500"
+          className="flex lg:flex-col md:flex-col flex-col pl-2 bg-transparent fixed w-[180px] top-[120px] h-[300px]  ease-in-out gap-[30px] left-[-400px] duration-500"
           style={
             toogleMenu ? { transform: "translateX(400px)", zIndex: 100 } : null
           }

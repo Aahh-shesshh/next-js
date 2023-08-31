@@ -19,10 +19,10 @@ const Mainbody = () => {
           viewport={{ once: false, amount: 0.5 }}
           className="flex flex-row font-bold"
         >
-          {title.map((i, key) => {
+          {title.map((i) => {
             return (
               <span
-                key={key}
+                key={i}
                 className="text-white lg:leading-[200px]  lg:opacity-40 lg:hover:opacity-100 md:text-8xl  text-7xl opacity-40 hover:opacity-100 lg:mt-0 lg:ml-0 lg:font-bold lg:text-[200px]"
               >
                 {i}

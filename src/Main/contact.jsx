@@ -106,6 +106,7 @@ export default function Contact() {
               className="send-btn relative"
               type="button"
               onClick={onSubmit}
+              
             >
               Send Message{" "}
               {isLoading && (

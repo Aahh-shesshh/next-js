@@ -15,11 +15,7 @@ export const projects = [
         img: "/images/project1.jpg"
     },
    
-    {
-        pretitle : "PYTHON",
-        title : "COSTUME RENTAL SYSTEM" ,
-        img: "/images/project5.jpg"
-    },
+   
     {
         pretitle : "HTML CSS JS",
         title : "STATIC ECOMMERCE" ,
@@ -30,6 +26,11 @@ export const projects = [
         pretitle : "NEXT JS",
         title : "PORTFOLIO WEBSITE" ,
         img: "/images/project7.jpg"
+    },
+    {
+        pretitle : "NEXT JS NodeJS MongoDB",
+        title : "Full-stack Social Media Platform" ,
+        img: "/images/social-media-app.jpg"
     },
 
 ]
