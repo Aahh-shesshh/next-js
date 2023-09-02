@@ -15,6 +15,7 @@ export default async function handler(req, res) {
       await transporter.sendMail({
         ...mailOptions,
         subject: data.message,
+
         text: "This is text string",
         html: `<h1>Portfolio Message</h1><table><tr>
           <th>Email</th><th>Message</th><th>Name</th></tr>
