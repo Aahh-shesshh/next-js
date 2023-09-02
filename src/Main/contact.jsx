@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { fadeIn } from "../variant";
 import { motion } from "framer-motion";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { AiOutlineCheck, AiOutlineLoading3Quarters } from "react-icons/ai";
 import { sendContactForm } from "@/lib/api";
 const initialValues = { name: "", email: "", message: "" };
 
@@ -9,6 +9,8 @@ const initialState = { values: initialValues };
 
 export default function Contact() {
   const [data, setData] = useState(initialState);
+  const [errorMessage, setErrorMessae] = useState({});
+  const [successMessage, setSuccessMessage] = useState("");
   const { values } = data;
   const [isLoading, setIsLoading] = useState(false);
   const handleChange = ({ target }) => {
@@ -23,9 +25,26 @@ export default function Contact() {
   };
 
   const onSubmit = async () => {
-    setIsLoading(true);
     try {
+      setIsLoading(true);
+      const validationErrors = {};
+      if (!values.name) {
+        validationErrors.name = "name is required";
+      }
+      if (!values.email) {
+        validationErrors.email = "email is required";
+      }
+      if (!values.message) {
+        validationErrors.message = "message is required";
+      }
+      if (Object.keys(validationErrors).length > 0) {
+        setErrorMessae(validationErrors);
+        setIsLoading(false);
+        return;
+      }
       await sendContactForm(values);
+      setData({ values: initialValues });
+      setSuccessMessage("Form Submitted Successfully");
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -83,6 +102,9 @@ export default function Contact() {
               required={true}
               name="email"
             />
+            {errorMessage.email && (
+              <p className="text-red-500 text-sm">{errorMessage.email}</p>
+            )}
             <input
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white  transition-all"
               type="text"
@@ -92,6 +114,9 @@ export default function Contact() {
               required={true}
               name="name"
             />
+            {errorMessage.name && (
+              <p className="text-red-500 text-sm">{errorMessage.name}</p>
+            )}
             <input
               className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white  
                transition-all mb-8 resize-none"
@@ -102,11 +127,18 @@ export default function Contact() {
               required={true}
               name="message"
             />
+            {errorMessage.message && (
+              <p className="text-red-500 text-sm">{errorMessage.message}</p>
+            )}
+            {successMessage && (
+              <p className="text-green-500 flex flex-row items-center text-base font-bold">
+                {successMessage} <AiOutlineCheck />
+              </p>
+            )}
             <button
               className="send-btn relative"
               type="button"
               onClick={onSubmit}
-              
             >
               Send Message{" "}
               {isLoading && (

@@ -23,7 +23,7 @@ export default async function handler(req, res) {
           </tr>
         </table>`,
       });
-      return res.status(200).json({ message: "sent mail successfully" });
+      return res.status(200).send({ message: "sent mail successfully" });
     } catch (error) {
       console.log(error);
       return res.status(400).json({ message: error.message });
