@@ -7,7 +7,9 @@ export default function Skills() {
   return (
     <div id="skills" className="w-full relative pt-2">
       <div className="flex px-[50px] gap-4  flex-col skills items-center  justify-center">
-        <h2 className="text-white font-bold  lg:text-5xl md:text-5xl text-3xl">My Skills</h2>
+        <h2 className="text-white font-bold  lg:text-5xl md:text-5xl text-3xl">
+          My Skills
+        </h2>
 
         <div className="w-[250px] h-1 bg-white flex items-center">
           <div className="w-[15px] circle h-[15px] rounded-full bg-orange-400"></div>
@@ -46,7 +48,7 @@ export default function Skills() {
           >
             <SkillCard url={"/images/expressjs.png"} title={"ExpressJS"} />
             <SkillCard url={"/images/node.png"} title={"NodeJS"} />
-            <SkillCard url={"/images/mongo.png"} title={"Mongo DB"} />
+            <SkillCard url={"/images/prisma.png"} title={"Prisma ORM"} />
           </motion.div>
           <hr className="w-full px-10  border-gray-500" />
           <h3 className="text-2xl text-stone-400">Version control</h3>

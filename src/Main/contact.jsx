@@ -157,4 +157,3 @@ export default function Contact() {
   );
 }
 
-// Home.Layout = Contact.BaseLayout;

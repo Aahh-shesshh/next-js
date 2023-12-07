@@ -20,7 +20,7 @@ export default function About() {
         </div>{" "}
       </div>
       <br />
-      <div className="border-2 w-full flex flex-col lg:flex-row items-center justify-center ml-[20px] lg:ml-0 lg:h-[450px] h-[750px]  rounded-md">
+      <div className="border-2 w-full flex flex-col lg:flex-row items-center justify-center ml-[20px] lg:ml-0 p-4 rounded-md">
         <div className="w-[500px] h-[445px] flex flex-col gap-[10px] justify-center items-center">
           <h1 className="font-extrabold text-4xl">Academics</h1>
           <div className="line"></div>
@@ -42,19 +42,24 @@ export default function About() {
           </div>
         </div>
 
-        <div className="w-[500px] h-[445px] flex flex-col gap-[10px] justify-center items-center">
+        <div className="w-[500px] flex flex-col gap-[10px] justify-center items-center">
           <h1 className="font-extrabold text-4xl">Hi!</h1>
           <div className="line"></div>
           <h3 className="font-bold text-xl text-white"></h3>
           <p className="text-xl text-white w-[350px]">
-            I am currently in 3rd year at ICP and am confident in my
-            ability to turn complex designs into clean and efficient code.
+            As an experienced React Developer with over more than 1 years of
+            experience. I have specialization in building high-quality wesites
+            that meets the needs of modern business. In my 1 years of experience
+            I have worked on variety of projects. My expertise includes
+            developing websites/apps, integrating third-party APIs, and building
+            complex UI/UX designs and having some experience of backend as
+            well(NodeJS).
           </p>
           <br />
           <div className="flex flex-row w-[350px] items-center justify-center gap-[30px]">
             <div>
               <div className="text-[40px] text-white font-tertiary text-gradient mb-2">
-                {inView ? <CountUp start={0} end={6} duration={3} /> : null}
+                {inView ? <CountUp start={0} end={12} duration={3} /> : null}
               </div>
               <div className="text-sm text-white tracking-[2px]">
                 Months of <br />
@@ -63,7 +68,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-[40px] text-white font-tertiary text-gradient mb-2">
-                {inView ? <CountUp start={0} end={6} duration={3} /> : null}+
+                {inView ? <CountUp start={0} end={10} duration={3} /> : null}+
               </div>
               <div className="text-sm text-white tracking-[2px]">
                 Projects <br />
@@ -72,7 +77,7 @@ export default function About() {
             </div>
             <div>
               <div className="text-[40px] text-white font-tertiary text-gradient mb-2">
-                {inView ? <CountUp start={0} end={4} duration={3} /> : null}+
+                {inView ? <CountUp start={0} end={6} duration={3} /> : null}+
               </div>
               <div className="text-sm text-white tracking-[2px]">
                 SKILLS <br />
@@ -84,5 +89,3 @@ export default function About() {
     </div>
   );
 }
-
-
