@@ -67,7 +67,7 @@ export default function Projects() {
                       <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
                       {/* images */}
                       <img
-                        className="group-hover:scale-125 transition-all duration-500"
+                        className="group-hover:scale-125 transition-all duration-500 "
                         src={project.img}
                         alt="ajfh"
                       ></img>

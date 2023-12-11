@@ -13,13 +13,6 @@ export const projects = [
   },
 
   {
-    pretitle: "HTML CSS JS",
-    title: "STATIC ECOMMERCE",
-    img: "/images/project6.jpg",
-    link: "https://github.com/Aahh-shesshh?tab=repositories",
-  },
-
-  {
     pretitle: "NEXT JS Tailwind CSS",
     title: "PORTFOLIO WEBSITE",
     img: "/images/project7.jpg",
@@ -35,6 +28,12 @@ export const projects = [
     pretitle: "NEXT JS NodeJS PostgreSQL Prisma Tailwind CSS",
     title: "Full-stack Spotify Clone",
     img: "/images/spotify.png",
+    link: "https://github.com/Aahh-shesshh/Spotify-frontend",
+  },
+  {
+    pretitle: "React Tailwind JS ",
+    title: "Make Me A Website",
+    img: "/images/makemeawebsite.png",
     link: "https://github.com/Aahh-shesshh/Spotify-frontend",
   },
 ];
